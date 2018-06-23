@@ -1,0 +1,32 @@
+<h2>Search for a Pokémon</h2>
+
+<div fxLayout="row" fxLayout.lt-sm="column">
+	<div class="search-container">
+		<form [formGroup]="searchForm">
+			<mat-form-field>
+				<input matInput formControlName="name" type="text" placeholder="Pokémon Name">
+			</mat-form-field>
+		</form>
+		
+		<button 
+			type="button" 
+			mat-raised-button 
+			color="accent"
+			[disabled]="!searchForm.value.name.length" 
+			(click)="onSearch()">
+			Search
+		</button>
+	</div>
+	<div class="results" *ngIf="pokemon">
+		<h3>Who's that Pokémon?</h3>
+		<mat-list>
+			<mat-list-item><p>Name: {{ pokemon?.name }}</p></mat-list-item>
+			<mat-list-item><p>Pokémon Number {{ pokemon?.id }}</p></mat-list-item>
+			<mat-list-item><p matLine>Type{{ pokemon?.types.length > 1 ? 's': '' }}: {{ pokemon?.types }}</p></mat-list-item>
+			<mat-list-item><p matLine>Possible Moves: {{ pokemon?.moves }}</p></mat-list-item>
+			<mat-list-item>
+				<img [src]="pokemon?.sprite">
+			</mat-list-item>
+		</mat-list>
+	</div>
+</div>

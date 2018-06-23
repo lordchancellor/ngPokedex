@@ -4,7 +4,12 @@
 	</mat-sidenav>
 	<mat-sidenav-content>
 		<pd-header (openMenu)="sidenav.open()"></pd-header>
+
 		<router-outlet></router-outlet>
+
+		<div class="overlay" fxLayout fxLayoutAlign="center center" *ngIf="showSpinner">
+			<mat-spinner></mat-spinner>
+		</div>
 	</mat-sidenav-content>
 </mat-sidenav-container>
 
