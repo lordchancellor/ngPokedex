@@ -1,9 +1,9 @@
 <mat-sidenav-container>
 	<mat-sidenav mode="over" #sidenav>
-		<pd-sidenav (closeMenu)="sidenav.close()"></pd-sidenav>
+		<dex-sidenav (closeMenu)="sidenav.close()"></dex-sidenav>
 	</mat-sidenav>
 	<mat-sidenav-content>
-		<pd-header (openMenu)="sidenav.open()"></pd-header>
+		<dex-header (openMenu)="sidenav.open()"></dex-header>
 
 		<router-outlet></router-outlet>
 

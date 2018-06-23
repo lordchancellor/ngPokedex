@@ -127,13 +127,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "",
+      "dex",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "",
+      "dex",
       "kebab-case"
     ],
     "no-output-on-prefix": true,

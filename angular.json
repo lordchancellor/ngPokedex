@@ -7,7 +7,7 @@
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "pd",
+      "prefix": "dex",
       "schematics": {
         "@schematics/angular:component": {
           "styleext": "scss"

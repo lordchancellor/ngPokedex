@@ -8,7 +8,7 @@ import { UserFeedbackService } from '../../user-feedback.service';
 import { Pokemon } from '../../models/pokemon';
 
 @Component({
-	selector: 'pd-pokemon-search',
+	selector: 'dex-pokemon-search',
 	templateUrl: './pokemon-search.component.html',
 	styleUrls: ['./pokemon-search.component.scss']
 })

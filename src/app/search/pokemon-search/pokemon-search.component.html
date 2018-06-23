@@ -18,7 +18,7 @@
 		</button>
 	</div>
 	<div *ngIf="pokemon && !notFound">
-		<pd-pokemon-info [pokemon]="pokemon"></pd-pokemon-info>
+		<dex-pokemon-info [pokemon]="pokemon"></dex-pokemon-info>
 	</div>
 	<div *ngIf="notFound" class="result-container">
 		<h3>ngPokédex is confused!</h3>

@@ -1,7 +1,7 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
-	selector: 'pd-sidenav',
+	selector: 'dex-sidenav',
 	templateUrl: './sidenav.component.html',
 	styleUrls: ['./sidenav.component.scss']
 })

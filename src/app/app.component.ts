@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserFeedbackService } from './user-feedback.service';
 
 @Component({
-	selector: 'pd-root',
+	selector: 'dex-root',
 	templateUrl: './app.component.html',
 	styleUrls: ['./app.component.scss']
 })
