@@ -17,16 +17,11 @@
 			Search
 		</button>
 	</div>
-	<div class="results" *ngIf="pokemon">
-		<h3>Who's that Pokémon?</h3>
-		<mat-list>
-			<mat-list-item><p>Name: {{ pokemon?.name }}</p></mat-list-item>
-			<mat-list-item><p>Pokémon Number {{ pokemon?.id }}</p></mat-list-item>
-			<mat-list-item><p matLine>Type{{ pokemon?.types.length > 1 ? 's': '' }}: {{ pokemon?.types }}</p></mat-list-item>
-			<mat-list-item><p matLine>Possible Moves: {{ pokemon?.moves }}</p></mat-list-item>
-			<mat-list-item>
-				<img [src]="pokemon?.sprite">
-			</mat-list-item>
-		</mat-list>
+	<div *ngIf="pokemon && !notFound">
+		<pd-pokemon-info [pokemon]="pokemon"></pd-pokemon-info>
+	</div>
+	<div *ngIf="notFound" class="result-container">
+		<h3>ngPokédex is confused!</h3>
+		<p>Sorry, that Pokémon could not be found. Please search again.</p>
 	</div>
 </div>

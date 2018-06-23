@@ -16,13 +16,15 @@ import { AppComponent } from './app.component';
 import { SidenavComponent } from './navigation/sidenav/sidenav.component';
 import { HeaderComponent } from './ui/header/header.component';
 import { PokemonSearchComponent } from './search/pokemon-search/pokemon-search.component';
+import { PokemonInfoComponent } from './search/pokemon-info/pokemon-info.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		SidenavComponent,
 		HeaderComponent,
-		PokemonSearchComponent
+		PokemonSearchComponent,
+		PokemonInfoComponent
 	],
 	imports: [
 		BrowserModule,

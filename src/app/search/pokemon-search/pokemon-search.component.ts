@@ -17,6 +17,7 @@ export class PokemonSearchComponent implements OnInit {
 	searchForm: FormGroup;
 
 	pokemon: Pokemon;
+	notFound: boolean = false;
 
 	constructor(private formBuilder: FormBuilder,
 							private pokemonService: PokemonService,
@@ -36,6 +37,8 @@ export class PokemonSearchComponent implements OnInit {
 
 		this.userFeedbackService.toggleSpinner();
 
+		this.notFound = false;
+
 		this.pokemonService.findPokemonByName(name)
 			.pipe(finalize(() => this.userFeedbackService.toggleSpinner()))
 			.subscribe(
@@ -43,8 +46,22 @@ export class PokemonSearchComponent implements OnInit {
 					console.log(pokemon);
 					this.pokemon = pokemon;
 				},
-				err => console.log(err)
+				err => this.handleError(err)
 			);
+	}
+
+
+	// Helper Methods
+	handleError(err: any): void {
+		console.log(err);
+
+		switch (err.status) {
+			case 404:
+				this.notFound = true;
+				break;
+			default:
+				break;
+		}
 	}
 
 }
