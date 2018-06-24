@@ -8,6 +8,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 // Layout
+import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 
 // Buttons & Indicators
@@ -19,6 +20,7 @@ const modules: any[] = [
 	MatInputModule,
 	MatSidenavModule,
 	MatToolbarModule,
+	MatCardModule,
 	MatListModule,
 	MatButtonModule,
 	MatIconModule,

@@ -4,7 +4,11 @@
 	<div class="search-container">
 		<form [formGroup]="searchForm">
 			<mat-form-field>
-				<input matInput formControlName="name" type="text" placeholder="Pokémon Name">
+				<input matInput 
+							 formControlName="name" 
+							 type="text" 
+							 placeholder="Pokémon Name"
+							 (keydown.enter)="onSearch()">
 			</mat-form-field>
 		</form>
 		
@@ -20,8 +24,13 @@
 	<div *ngIf="pokemon && !notFound">
 		<dex-pokemon-info [pokemon]="pokemon"></dex-pokemon-info>
 	</div>
-	<div *ngIf="notFound" class="result-container">
-		<h3>ngPokédex is confused!</h3>
-		<p>Sorry, that Pokémon could not be found. Please search again.</p>
-	</div>
+	<mat-card *ngIf="notFound" class="result-container">
+		<mat-card-header>
+			<img mat-card-avatar [src]="questionMark">
+			<mat-card-title>ngPokédex is confused!</mat-card-title>
+		</mat-card-header>
+		<mat-card-content>
+			<p>Sorry, that Pokémon could not be found. Please search again.</p>
+		</mat-card-content>
+	</mat-card>
 </div>

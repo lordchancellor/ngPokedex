@@ -26,10 +26,10 @@ export class PokemonService {
 					id: res.id,
 					name: this.capitalise(res.name),
 					typeArray: this.processTypes(res.types),
-					types: this.processTypes(res.types).join(', '),
+					types: this.processTypes(res.types).reverse().join(', '),
 					sprite: res.sprites.front_default,
 					moveArray: this.processMoves(res.moves),
-					moves: this.processMoves(res.moves).join(', ')
+					moves: this.processMoves(res.moves).reverse().join(', ')
 				};
 			})
 		);

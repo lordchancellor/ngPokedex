@@ -14,6 +14,8 @@ export interface PokemonAPI {
 	types: Types[];
 	sprites: Sprites;
 	moves: Moves[];
+	weight: number;
+	height: number;
 }
 
 export interface Types {

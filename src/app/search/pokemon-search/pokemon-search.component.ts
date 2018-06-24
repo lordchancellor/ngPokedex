@@ -18,6 +18,7 @@ export class PokemonSearchComponent implements OnInit {
 
 	pokemon: Pokemon;
 	notFound: boolean = false;
+	questionMark: string = 'assets/question-mark.png';
 
 	constructor(private formBuilder: FormBuilder,
 							private pokemonService: PokemonService,
